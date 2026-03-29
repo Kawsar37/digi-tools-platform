@@ -1,2 +1,8 @@
-@import "tailwindcss";
-@plugin "daisyui";
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.p-bg {
+  background-image: linear-gradient(to right, #4f39f6, #9514fa);
+}
