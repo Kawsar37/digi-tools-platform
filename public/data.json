@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Resume Kit",
+    "description": "Basic resume builder with essential templates for freshers.",
+    "price": 1,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic customization", "Download as PDF"],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Builder",
+    "description": "Advanced resume builder with ATS-friendly templates.",
+    "price": 9.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF & DOCX",
+      "Custom sections"
+    ],
+    "icon": "🏆"
+  },
+  {
+    "id": 3,
+    "name": "Career Plus",
+    "description": "Complete career toolkit with resume, cover letter, and tracking.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Resume builder",
+      "Cover letter generator",
+      "Job tracking dashboard",
+      "Cloud save"
+    ],
+    "icon": "💼"
+  },
+  {
+    "id": 4,
+    "name": "Lifetime Resume Access",
+    "description": "One-time purchase for lifetime access to all resume tools.",
+    "price": 49.99,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Unlimited downloads",
+      "All premium templates",
+      "Lifetime updates"
+    ],
+    "icon": "♾️"
+  },
+  {
+    "id": 5,
+    "name": "Student Pack",
+    "description": "Affordable resume solution for students and fresh graduates.",
+    "price": 4.99,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["20+ templates", "Simple editor", "PDF export"],
+    "icon": "🎓"
+  },
+  {
+    "id": 6,
+    "name": "Executive Resume Suite",
+    "description": "Premium resume tools tailored for senior professionals.",
+    "price": 29.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Executive templates",
+      "Personal branding tools",
+      "LinkedIn optimization",
+      "Priority support"
+    ],
+    "icon": "👑"
+  },
+  {
+    "id": 7,
+    "name": "AI Resume Assistant",
+    "description": "AI-powered resume writing and suggestions.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "AI suggestions",
+      "Keyword optimization",
+      "Auto summary generator"
+    ],
+    "icon": "🤖"
+  },
+  {
+    "id": 8,
+    "name": "Ultimate Career Bundle",
+    "description": "All-in-one premium bundle for job seekers.",
+    "price": 99.99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Everything in Pro",
+      "Interview preparation",
+      "Portfolio builder",
+      "Priority AI support"
+    ],
+    "icon": "🚀"
+  }
+]

@@ -1,5 +1,6 @@
 import React from "react";
 import { CgShoppingCart } from "react-icons/cg";
+import PrimaryButton from "../ui/PrimaryButton";
 
 export default function Navbar() {
   return (
@@ -25,9 +26,7 @@ export default function Navbar() {
           </div>
 
           <button>Login</button>
-          <button className="btn rounded-full text-white p-bg">
-            Get Started
-          </button>
+          <PrimaryButton text={"Get Started"} />
         </div>
       </div>
     </nav>
