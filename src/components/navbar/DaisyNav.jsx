@@ -2,7 +2,7 @@ import React from "react";
 import PrimaryButton from "../ui/PrimaryButton";
 import { CgShoppingCart } from "react-icons/cg";
 
-export default function DaisyNav({ cartItems }) {
+export default function DaisyNav({ cartItems, setSelectedType }) {
   return (
     <div className="navbar bg-base-100 shadow-sm lg:px-45">
       <div className="navbar-start">
@@ -69,14 +69,18 @@ export default function DaisyNav({ cartItems }) {
         </ul>
       </div>
       <div className="navbar-end flex gap-1 sm:gap-4 items-center">
-        <div className="indicator">
+        <a
+          className="indicator cursor-pointer"
+          onClick={() => setSelectedType("Cart")}
+          href="#cart"
+        >
           <CgShoppingCart size={24} />
           {cartItems.length > 0 && (
             <span className="badge badge-sm indicator-item bg-blue-500 font-semibold">
               {cartItems.length}
             </span>
           )}
-        </div>
+        </a>
 
         <button>Login</button>
         <PrimaryButton text={"Get Started"} />

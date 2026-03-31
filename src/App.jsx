@@ -6,17 +6,27 @@ import DaisyNav from "./components/navbar/DaisyNav";
 import Navbar from "./components/navbar/Navbar";
 import Steps from "./components/steps/Steps";
 import Pricing from "./components/pricing/Pricing";
+import ExploreProduct from "./components/explore-product/ExploreProduct";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [selectedType, setSelectedType] = useState("Products");
   return (
     <>
       {/* <Navbar /> */}
-      <DaisyNav cartItems={cartItems} />
+      <DaisyNav cartItems={cartItems} setSelectedType={setSelectedType} />
       <Hero />
-      <DigitalTools cartItems={cartItems} setCartItems={setCartItems} />
+      <DigitalTools
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+        selectedType={selectedType}
+        setSelectedType={setSelectedType}
+      />
       <Steps />
       <Pricing />
+      <ExploreProduct />
+      <Footer />
     </>
   );
 }

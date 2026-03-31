@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import PrimaryButton from "../ui/PrimaryButton";
 import Products from "./Products";
 import Cart from "./Cart";
@@ -8,13 +8,16 @@ const fetchProducts = async () => {
   return res.json();
 };
 
-export default function DigitalTools({ cartItems, setCartItems }) {
-  const [selectedType, setSelectedType] = useState("Products");
-
+export default function DigitalTools({
+  cartItems,
+  setCartItems,
+  selectedType,
+  setSelectedType,
+}) {
   const productPromise = fetchProducts();
 
   return (
-    <div>
+    <div id="cart">
       <div className="container mx-auto text-center space-y-4">
         <h1 className="text-4xl font-semibold mt-10 md:mt-20">
           Premium Digital Tools
