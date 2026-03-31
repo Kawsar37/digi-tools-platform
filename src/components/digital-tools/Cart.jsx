@@ -1,6 +1,7 @@
 import React from "react";
 import EmptyCart from "./EmptyCart";
 import CartCard from "./CartCard";
+import { toast } from "react-toastify";
 
 export default function Cart({ cartItems, setCartItems }) {
   return (
@@ -30,7 +31,10 @@ export default function Cart({ cartItems, setCartItems }) {
             </div>
             <button
               className="btn rounded-full text-white p-bg w-full mt-4"
-              onClick={() => setCartItems([])}
+              onClick={() => {
+                setCartItems([]);
+                toast.success("Checkout Done");
+              }}
             >
               Proceed To Checkout
             </button>

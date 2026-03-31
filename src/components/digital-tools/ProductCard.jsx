@@ -1,5 +1,6 @@
 import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
+import { toast } from "react-toastify";
 
 export default function ProductCard({ product, setCartItems }) {
   //  {
@@ -41,9 +42,13 @@ export default function ProductCard({ product, setCartItems }) {
           </li>
         ))}
       </ul>
+
       <button
         className="btn rounded-full text-white p-bg w-full mt-auto"
-        onClick={() => setCartItems((prev) => [...prev, product])}
+        onClick={() => {
+          setCartItems((prev) => [...prev, product]);
+          toast.success("Added to cart");
+        }}
       >
         Buy Now
       </button>

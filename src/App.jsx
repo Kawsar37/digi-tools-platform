@@ -3,11 +3,11 @@ import "./App.css";
 import DigitalTools from "./components/digital-tools/DigitalTools";
 import Hero from "./components/hero/Hero";
 import DaisyNav from "./components/navbar/DaisyNav";
-import Navbar from "./components/navbar/Navbar";
 import Steps from "./components/steps/Steps";
 import Pricing from "./components/pricing/Pricing";
 import ExploreProduct from "./components/explore-product/ExploreProduct";
 import Footer from "./components/footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -27,6 +27,8 @@ function App() {
       <Pricing />
       <ExploreProduct />
       <Footer />
+
+      <ToastContainer />
     </>
   );
 }

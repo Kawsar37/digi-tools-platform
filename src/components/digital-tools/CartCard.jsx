@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 export default function CartCard({ cartItem, cartItems, setCartItems }) {
   return (
@@ -14,9 +15,10 @@ export default function CartCard({ cartItem, cartItems, setCartItems }) {
       </div>
       <button
         className="text-red-500 cursor-pointer"
-        onClick={() =>
-          setCartItems(cartItems.filter((item) => item.id != cartItem.id))
-        }
+        onClick={() => {
+          setCartItems(cartItems.filter((item) => item.id != cartItem.id));
+          toast.error("Product Removed");
+        }}
       >
         Remove
       </button>
