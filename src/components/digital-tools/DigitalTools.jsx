@@ -1,12 +1,13 @@
 import React, { Suspense } from "react";
-import PrimaryButton from "../ui/PrimaryButton";
 import Products from "./Products";
 import Cart from "./Cart";
+import Loading from "../ui/Loading";
 
 const fetchProducts = async () => {
   const res = await fetch("./data.json");
   return res.json();
 };
+const productPromise = fetchProducts();
 
 export default function DigitalTools({
   cartItems,
@@ -14,8 +15,6 @@ export default function DigitalTools({
   selectedType,
   setSelectedType,
 }) {
-  const productPromise = fetchProducts();
-
   return (
     <div id="cart">
       <div className="container mx-auto text-center space-y-4">
@@ -46,7 +45,7 @@ export default function DigitalTools({
         {/* Products  */}
       </div>
       {selectedType === "Products" ? (
-        <Suspense fallback={<p>Loading....</p>}>
+        <Suspense fallback={<Loading />}>
           <Products
             productPromise={productPromise}
             setCartItems={setCartItems}
