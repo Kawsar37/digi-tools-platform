@@ -1,4 +1,4 @@
-# Project Title: ## DigiTools Platform
+# Project Title: DigiTools Platform
 
 # Project Description:
 
