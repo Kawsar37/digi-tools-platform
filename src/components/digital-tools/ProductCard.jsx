@@ -2,7 +2,8 @@ import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
 import { toast } from "react-toastify";
 
-export default function ProductCard({ product, setCartItems }) {
+export default function ProductCard({ product, setCartItems, cartItems }) {
+  const clicked = cartItems.find((item) => item.id == product.id);
   //  {
   // "id": 8,
   // "name": "Ultimate Career Bundle",
@@ -43,15 +44,21 @@ export default function ProductCard({ product, setCartItems }) {
         ))}
       </ul>
 
-      <button
-        className="btn rounded-full text-white p-bg w-full mt-auto"
-        onClick={() => {
-          setCartItems((prev) => [...prev, product]);
-          toast.success("Added to cart");
-        }}
-      >
-        Buy Now
-      </button>
+      {clicked ? (
+        <button className="btn rounded-full text-white bg-[#30B868] w-full mt-auto">
+          <IoMdCheckmark color="white" size={18} /> Added to cart
+        </button>
+      ) : (
+        <button
+          className="btn rounded-full text-white p-bg w-full mt-auto"
+          onClick={() => {
+            setCartItems((prev) => [...prev, product]);
+            toast.success("Added to cart");
+          }}
+        >
+          Buy Now
+        </button>
+      )}
     </div>
   );
 }

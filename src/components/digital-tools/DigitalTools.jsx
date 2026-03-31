@@ -49,6 +49,7 @@ export default function DigitalTools({
           <Products
             productPromise={productPromise}
             setCartItems={setCartItems}
+            cartItems={cartItems}
           />
         </Suspense>
       ) : (

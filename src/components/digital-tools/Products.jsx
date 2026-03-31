@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import ProductCard from "./ProductCard";
 
-export default function Products({ productPromise, setCartItems }) {
+export default function Products({ productPromise, setCartItems, cartItems }) {
   const products = use(productPromise);
 
   return (
@@ -11,6 +11,7 @@ export default function Products({ productPromise, setCartItems }) {
           key={product.id}
           product={product}
           setCartItems={setCartItems}
+          cartItems={cartItems}
         />
       ))}
     </div>
